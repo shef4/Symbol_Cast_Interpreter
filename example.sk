@@ -1,0 +1,8 @@
+# This is a very useful piece of software
+
+
+PRINT("Greetings universe!")
+
+LOOP i = 0 TO 5 THEN
+    PRINT(i)
+END

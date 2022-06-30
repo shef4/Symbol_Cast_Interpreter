@@ -1,10 +1,17 @@
-import symbol_cast
-while True:
-    text = input('symbol_cast > ')
-    result, error = symbol_cast.run('<stdin>',text)
+import symbolkast
 
-    if error: print(error.as_string())
-    else: print(result)
+while True:
+	text = input('symbolkast > ')
+	if text.strip() == "": continue
+	result, error = symbolkast.run('<stdin>', text)
+
+	if error:
+		print(error.as_string())
+	elif result:
+		if len(result.elements) == 1:
+			print(repr(result.elements[0]))
+		else:
+			print(repr(result))
     
     # for loop
     #VAR r = 1
@@ -19,3 +26,5 @@ while True:
     ##LOOP i = 6 TO 1 THEN VAR i = i + 1
     
     #FUN add (a,b) -> a+b
+    
+    #RUN("example.sk")
